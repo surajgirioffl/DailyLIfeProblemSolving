@@ -1,5 +1,6 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 int main()
 {
     while (1)
@@ -12,7 +13,7 @@ int main()
             break;
         int i;
         for (i = 0; string[i] != '\0'; i++)
-            printf("%d=%c  ", i + 1, string[i]);
+            printf("%d='%c'  ", i + 1, string[i]);
         printf("\n\033[1;31mTotal characters = %d\n\033[0m", i);
         system("pause");
     }
