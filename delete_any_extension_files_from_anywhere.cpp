@@ -1,4 +1,4 @@
-﻿/*Q. To delete any file with *.exe extension in user's entered directory (initally my aim)*/
+﻿/*Q. To delete any file with *.exe extension in user's entered directory (initially my aim)*/
 /*To delete any file with any extension in any directory provided by user*/
 // dir /b *.exe
 // cd /<drive_name> "<path>" && <other command>
@@ -129,7 +129,7 @@ int delUserFiles::displayAndSaveFiles()
      *see 'https://stackoverflow.com/questions/17753986/how-to-change-directory-using-windows-command-line'
      *we can change drive simply by giving command D: or C: etc and then we can use && for next commands.
      *We will used 'pushd' command to directly go to anywhere without any issue.
-     *see stackover flow for more details.
+     *see stackoverflow for more details.
      *Now drive name is not required to check.😁
      *'cd' command is also not required.😁
      */
@@ -173,7 +173,7 @@ int delUserFiles::displayAndSaveFiles()
     return 1; // success
 }
 
-/*returns 1 on successfull deletion of files else returns 0*/
+/*returns 1 on successful deletion of files else returns 0*/
 int delUserFiles::performDeletionOperation()
 {
     // function to delete the file that user wants
