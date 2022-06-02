@@ -76,7 +76,7 @@ void delUserFiles::takePathAndExtensionFromUser()
         cout << "\033[0m$ ";
         /*we have not used cin() because it ignores leading newline that cause not printing of $ on press enter*/
         gets(extension);
-        if (strcmp(path, "\0") == 0) // if user press enter without writing anything
+        if (strcmp(extension, "\0") == 0) // if user press enter without writing anything
             continue;
         else if (isCorrectExtension()) // checking extension name is correct or not
             break;
@@ -138,7 +138,7 @@ int delUserFiles::displayAndSaveFiles()
     //     sprintf(command, "cd \"%s\" && dir /b *.%s", path, extension);
     // else
     //     sprintf(command, "cd /%c \"%s\" && dir /b *.%s", extractDriveName(), path, extension);
-    sprintf(command, "pushd \"%s\" && dir /b *.%s", path, extension);
+    sprintf(command, "pushd \"%s\" && dir /b *.%s", path, extension); //"dir /b" display all directories and files without any unwanted info
 
     // cout << command << endl;
     /*Display part*/
